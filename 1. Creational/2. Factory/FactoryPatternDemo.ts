@@ -1,20 +1,18 @@
-import {ShapeFactory} from './ShapeFactory';
-import {Circle} from './Circle';
-import {Rectangle} from './Rectangle';
-import {Square} from './Square';
+import { ShapeFactory } from "./ShapeFactory";
+import { IShape } from "./IShape";
 
 class FactoryPatternDemo {
-    public static main(): void {
-        const shapeFactory: ShapeFactory = new ShapeFactory()
+  public static main(): void {
+    const shapeFactory: ShapeFactory = new ShapeFactory();
 
-        const circle: Circle = shapeFactory.getShape("circle")
-        const rectangle: Rectangle = shapeFactory.getShape("rectangle")
-        const square: Square = shapeFactory.getShape("square")
+    const circle: IShape = shapeFactory.getShape("circle");
+    const rectangle: IShape = shapeFactory.getShape("rectangle");
+    const square: IShape = shapeFactory.getShape("square");
 
-        circle.draw()
-        rectangle.draw()
-        square.draw()
-    }
+    circle.draw();
+    rectangle.draw();
+    square.draw();
+  }
 }
 
-FactoryPatternDemo.main()
+FactoryPatternDemo.main();
