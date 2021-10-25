@@ -12,3 +12,14 @@
   * Use the Factory Method when you want to provide users of your library or framework with a way to extend its internal components.
   * Use the Factory Method when you want to save system resources by reusing existing objects instead of rebuilding them each time.
     
+[3. Abstract Factory Pattern](3.%20Abstract%20Factory)
+- Abstract Factory patterns work around a super-factory which creates other factories. This factory is also **called as factory of factories**.
+
+- In Abstract Factory pattern an interface is responsible for creating a factory of related objects without explicitly specifying their classes. Each generated factory can give the objects as per the Factory pattern.
+
+[4. Builder Pattern](4.%20Builder)
+- Builder pattern builds a complex object using simple objects and using a step by step approach.
+  This builder is independent of other objects.
+- There’s another approach that doesn’t involve breeding subclasses. You **can create a giant constructor right** in the base class with all possible parameters that control the object. 
+  * <i>While this approach indeed eliminates the need for subclasses, it creates another problem.</i>  
+  * In most cases most of the **parameters will be unused**, making the **constructor calls pretty ugly**. 
